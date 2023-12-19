@@ -38,7 +38,7 @@ flask --app main run
 The application will now run on [http://localhost:5000](http://localhost:5000)
 
 #### Note
-The application requires an API key to function properly. This can be set as a parameter in a .env file. Please get in contact at artykonis@gmail.com if running the application and I will provide the key.
+The application requires an API key to function properly. This can be set as a parameter in an .env file. Please get in contact at artykonis@gmail.com if running the application and I will provide the key.
 ### Frontend
 
 Install the dependencies 
