@@ -6,6 +6,10 @@ load_dotenv()
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return 'Ready!', 200
+
 @app.route("/compute_result", methods=["POST"])
 def compute_result():
     data = request.get_json()

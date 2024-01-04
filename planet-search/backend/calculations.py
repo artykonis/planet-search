@@ -1,5 +1,5 @@
 import os
-from geoapify_apis import *
+from data import *
 from skyfield.api import load, N, W, wgs84
 
 def calculate_planet_altitude(address, planet):
