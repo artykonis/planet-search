@@ -1,3 +1,6 @@
 *.pyc
+*.bsp
+.env
 
-/venv
+venv/
+__pycache__/
