@@ -12,9 +12,16 @@ def home():
 
 @app.route("/compute_result", methods=["POST"])
 def compute_result():
+    VALID_PLANETS = ['mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune']
     data = request.get_json()
-    address = data['address']
-    planet = data['planet']
+    try: 
+        address = data['address']
+        planet = data['planet']
+    except KeyError:
+        return jsonify({'error': '"Address" or "Planet" missing from request body'}), 400
+
+    if planet.lower() not in VALID_PLANETS:
+        return jsonify({'error': 'Planet not recognised'}), 422
 
     visibility = calculate_planet_altitude(address, planet)
     altitude_in_degrees = visibility.degrees
